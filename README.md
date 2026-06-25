@@ -1,0 +1,1 @@
+Shelf, a lightweight CLI note / bookmark manager.
