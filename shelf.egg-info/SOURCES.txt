@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+shelf/__init__.py
+shelf/cli.py
+shelf/models.py
+shelf/storage.py
+shelf.egg-info/PKG-INFO
+shelf.egg-info/SOURCES.txt
+shelf.egg-info/dependency_links.txt
+shelf.egg-info/entry_points.txt
+shelf.egg-info/top_level.txt
+tests/test_storage.py

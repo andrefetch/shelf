@@ -1,0 +1,2 @@
+[console_scripts]
+shelf = shelf.cli:main
