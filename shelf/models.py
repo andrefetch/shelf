@@ -1,6 +1,13 @@
 from datetime import datetime
 import uuid
 
+'''
+Note dataclass, handles title, body, and tags.
+
+Generates:
+id, and created_at time stamp.
+'''
+
 class Note:
 
     def __init__(self, title: str, body: str, tags: list[str], id: int, created_at: str):
