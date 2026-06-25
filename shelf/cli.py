@@ -28,6 +28,9 @@ def cmd_remove(args):
     storage.save(notes)
     print(f"Removed {args.id}")
 
+def cmd_help(args):
+    parser.print_help()
+
 def main():
     parser = argparse.ArgumentParser(prog="shelf")
     sub = parser.add_subparsers(dest="command")
