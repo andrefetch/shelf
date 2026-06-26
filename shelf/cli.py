@@ -1,4 +1,5 @@
 import argparse
+import json
 from shelf import storage
 from shelf.models import Note
 
@@ -31,6 +32,10 @@ def cmd_remove(args):
 def cmd_help(args):
     parser.print_help()
 
+def cmd_export(args):
+    notes = storage.load()
+    print(json.dumps([vars(n) for n in notes], indent=2))
+
 def main():
     parser = argparse.ArgumentParser(prog="shelf")
     sub = parser.add_subparsers(dest="command")
@@ -45,8 +50,10 @@ def main():
     p_remove = sub.add_parser("remove", help="Remove a note by id")
     p_remove.add_argument("id")
 
+    p_export = sub.add_parser("export", help="Export notes as JSON")
+
     args = parser.parse_args()
-    dispatch = {"add": cmd_add, "list": cmd_list, "remove": cmd_remove}
+    dispatch = {"add": cmd_add, "list": cmd_list, "remove": cmd_remove, "export": cmd_export}
     if args.command in dispatch:
         dispatch[args.command](args)
     else:
