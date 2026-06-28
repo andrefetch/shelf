@@ -1,6 +1,6 @@
 # shelf
 
-A minimal CLI note and bookmark manager. Stores notes locally as JSON.
+A minimal CLI note and bookmark manager, stores notes locally as JSON.
 
 ## Installation
 
